@@ -5,7 +5,9 @@ import {
   BasicComposite,
   bookmarkIcon,
   ShortestWorking,
+  SimpleHello,
 } from './components/Small'
+import { TextComponent } from './components/Sample'
 
 const msg = ref('Hello World!')
 </script>
@@ -39,7 +41,14 @@ const msg = ref('Hello World!')
   <BasicOptions :title="'Basic Options Title'"></BasicOptions>
   <BasicComposite :title="'Basic Composite Title'"></BasicComposite>
 
-  <Joe :title="'Basic Composite Title'"></Joe>
+  <Joe :title="'Basic Composite Title'" />
+
+  <TextComponent color="green"></TextComponent>
+  <SimpleHello color="red" />
 
   <!-- <HelloWorld :msg="msg" /> -->
+
+  <template
+    class="bg-green-700 bg-red-700 bg-blue-700 text-yellow-300"
+  ></template>
 </template>
