@@ -48,9 +48,22 @@ export const bookmarkIcon = defineComponent(() => () => (
 export const SimpleHello = ({ color }: { color: 'blue' | 'red' | 'green' }) => {
   const self = reactive({ color: 'yellow' })
 
+  CustomLog('SimpleHello render', self)
+
   return (
     <div class={`bg-${color}-700 text-${self.color}-300 font-bold text-xl p-4`}>
-      Hello World
+      Functional Component using TSX (not working with "defineComponent()")
     </div>
   )
+}
+
+function CustomLog(msg: string, obj: any) {
+  const styles = `
+    background: linear-gradient(135deg, purple 10%, red 50%, orange 100%);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 2px 5px;`
+
+  console.log('%c' + msg, styles, obj)
 }

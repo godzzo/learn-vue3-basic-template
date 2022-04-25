@@ -12,6 +12,6 @@ export const TextComponent = ({
     {
       class: `bg-${color}-700 text-${ownColor.value}-300 font-bold text-xl p-4`,
     },
-    'Hello World'
+    'Functional Component (it is only a function!) return VNode by "h()"'
   )
 }
